@@ -5,14 +5,14 @@ use Getopt::Long;
 
 ##Please specify where your prefered database searching tool locates
 ##NCBI blast ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/blast-2.2.26-x64-linux.tar.gz
-my $blast    = "~/bin/blast/bin/blastall";
-my $formatdb = "~/bin/blast/bin/formatdb";
+my $blast    = "blastall";
+my $formatdb = "formatdb";
 my $blast_parameters="-m 8 -e 1e-4 -b 1 -v 1";
 ##diamond https://github.com/bbuchfink/diamond/releases
-my $diamond = "~/bin/diamond-0.9.14/bin/diamond";
+my $diamond = "diamond";
 my $diamond_parameters="-k 1 -e 1e-4 -p 20";
 ##usearch https://www.drive5.com/usearch/download.html
-my $usearch = "~/bin/usearch8.1.1861_i86linux32";
+my $usearch = "usearch8.1.1861_i86linux32";
 my $usearch_parameters="-id 0.3";
 
 my ( $workdir, $method, $outfile, $seqtype, $filetype, $sampleinfo, $randomsampling );
