@@ -85,7 +85,7 @@ elsif ( $method eq "blast" ) {
 }
 
 my %id2gene;
-open( FILE, "./id2gene.2020Mar.map" ) || die "#1\n";
+open( FILE, "./id2gene.2020Mar.map" ) || die "#1 cannot open id2gene.2020Mar.map\n";
 while (<FILE>) {
   chomp;
   my @items = split( "\t", $_ );
@@ -104,7 +104,7 @@ foreach my $file ( @sfiles ) {
   my $sample = $1;
   $samples{$sample} = 1;
   my %hit;
-  open( FILE, "$file" ) || die "#2\n";
+  open( FILE, "$file" ) || die "#2 cannot open $file\n";
   while (<FILE>) {
     chomp;
     my @items = split( "\t", $_ );
@@ -119,7 +119,7 @@ foreach my $file ( @sfiles ) {
 
 my %size;
 my @sizes;
-open( FILE, "$sampleinfo" ) || die "#3\n";
+open( FILE, "$sampleinfo" ) || die "#3 cannot open $sampleinfo\n";
 while (<FILE>) {
   chomp;
   my @items = split( "\t", $_ );
@@ -137,7 +137,7 @@ $rs = $randomsampling if defined $randomsampling;
 my %abundance_rs = &RandomSampling( \%abundance, \%size, $rs );
 
 my @samples = keys %samples;
-open( OUT, ">$outfile" ) || die "#2\n";
+open( OUT, ">$outfile" ) || die "#4 cannot write $outfile\n";
 print OUT "#random sampling: $rs\n";
 print OUT "Gene\t", join( "\t", @samples ), "\n";
 foreach my $gene ( sort keys %abundance_rs ) {
