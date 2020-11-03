@@ -83,7 +83,7 @@ elsif ( $method eq "blast" ) {
 }
 
 my %id2gene;
-open( FILE, "./id2gene.2020Mar.map" ) || die "#1\n";
+open( FILE, "./id2gene.2020Mar.map" ) || die "#1 cannot open file id2gene.2020Mar.map\n";
 while (<FILE>) {
   chomp;
   my @items = split( "\t", $_ );
@@ -102,7 +102,7 @@ foreach my $sfile ( @sfiles ) {
   my $sample = $1;
   $samples{$sample} = 1;
   my %hit;
-  open( FILE, "$sfile" ) || die "#2\n";
+  open( FILE, "$sfile" ) || die "#2 cannot open file $sfile\n";
   while (<FILE>) {
     chomp;
     my @items = split( "\t", $_ );
@@ -113,7 +113,7 @@ foreach my $sfile ( @sfiles ) {
     }
   }
   close FILE;
-  open(LIST,">$sample.list")||die"#2\n";
+  open(LIST,">$sample.list")||die"#3 cannot open $sample.list\n";
   foreach my $hit(keys %hit){
     print LIST "$hit\n";
   }
@@ -134,7 +134,7 @@ foreach my $file(glob("*.SCyc.fastq")){
 
 my %size;
 my @sizes;
-open( FILE, "$sampleinfo" ) || die "#3\n";
+open( FILE, "$sampleinfo" ) || die "#4 cannot open $sampleinfo\n";
 while (<FILE>) {
   chomp;
   my @items = split( "\t", $_ );
@@ -148,7 +148,7 @@ foreach my $sample(keys %samples){
 
 my %abundance;
 foreach my $sample(keys %size){
-  open(KRAKEN,"$sample\.kraken2.report")||die"#4\n";
+  open(KRAKEN,"$sample\.kraken2.report")||die"#5 cannot open $sample\.kraken2.report\n";
   while(<KRAKEN>){
 	chomp;
 	my @items=split("\t",$_);
@@ -189,7 +189,7 @@ foreach my $taxlevel(keys %abundance){
 
 my @samples = keys %size;
 foreach my $taxlevel(keys %abundance_rs){
-  open(OUT,">SCycDB_tax_$taxlevel.txt")||die"#5\n";
+  open(OUT,">SCycDB_tax_$taxlevel.txt")||die"#5 cannot write SCycDB_tax_$taxlevel.txt\n";
   print OUT "#random sampling: $rs\n";
   print OUT "Tax\t", join( "\t", @samples ), "\n";
   foreach my $tax ( sort keys %{$abundance_rs{$taxlevel}} ) {
