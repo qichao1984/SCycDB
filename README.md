@@ -30,7 +30,7 @@ git clone https://github.com/qichao1984/SCycDB.git
 
 <b>USAGE</b>
 
-Before getting started, please modify the scripts at lines xxx-xxx to specify the locations of third party tools and their parameters. By default, basic parameters are used for these tools. Users are encoraged to make revisions in cases such as short reads and/or more strict/relaxed results are expected.
+Before getting started, please modify both scripts (SCycDB_FunctionProfiler.PL, SCycDB_TaxonomyProfiler.PL) at lines 6-16 to specify the locations of third party tools and their parameters. If the tools are in the system path, no revision is needed for the path of these tools. By default, basic parameters are used for these tools. Users are encouraged to make revisions in cases such as short reads and/or more strict/relaxed results are expected.
 
 
 <b>Example for using SCycDB_FunctionProfiler.PL:</b>
