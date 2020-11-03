@@ -20,11 +20,13 @@ git clone https://github.com/qichao1984/SCycDB.git
 
 <b>Dependencies and Tools</b>
 
-usearch: https://www.drive5.com/usearch/download.html
-diamond: https://github.com/bbuchfink/diamond/releases
-blast: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/blast-2.2.26-x64-linux.tar.gz
-seqtk: https://github.com/lh3/seqtk.git;
-kraken2: https://github.com/DerrickWood/kraken2.git
+<i>Dependencies for SCycDB_FunctionProfiler.PL, currently supported database searching tools are: </i>
+<p>usearch: https://www.drive5.com/usearch/download.html
+<p>diamond: https://github.com/bbuchfink/diamond/releases
+<p>blast: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/blast-2.2.26-x64-linux.tar.gz</p>
+<i>Dependencies for SCycDB_TaxonomyProfiler.PL:</i>
+<p>seqtk: https://github.com/lh3/seqtk.git
+<p>kraken2: https://github.com/DerrickWood/kraken2.git
 
 <b>USAGE</b>
 
