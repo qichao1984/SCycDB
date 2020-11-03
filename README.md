@@ -19,7 +19,9 @@ Three files are generated for SCycDB:
 git clone https://github.com/qichao1984/SCycDB.git
 
 <b>Dependencies and Tools</b>
-
+<i>Perl modules that can be easily installed via cpan:</i>
+<p>List::Util</p>
+<p>Getopt::Long</p>
 <i>Dependencies for SCycDB_FunctionProfiler.PL, currently supported database searching tools are: </i>
 <p>usearch: https://www.drive5.com/usearch/download.html
 <p>diamond: https://github.com/bbuchfink/diamond/releases
@@ -30,7 +32,7 @@ git clone https://github.com/qichao1984/SCycDB.git
 
 <b>USAGE</b>
 
-Before getting started, please modify both scripts (SCycDB_FunctionProfiler.PL, SCycDB_TaxonomyProfiler.PL) at lines 6-16 to specify the locations of third party tools and their parameters. If the tools are in the system path, no revision is needed for the path of these tools. By default, basic parameters are used for these tools. Users are encouraged to make revisions in cases such as short reads and/or more strict/relaxed results are expected.
+Before getting started, please modify both scripts (SCycDB_FunctionProfiler.PL, SCycDB_TaxonomyProfiler.PL) at lines 6-16 to specify the locations of third party tools and their parameters. If the tools are in the system path, no revision is needed for the path of these tools. By default, basic parameters are used for these tools. Users are encouraged to make revisions in cases of short reads and/or expecting more strict/relaxed results. We also encourage users to develop useful implementations based on SCycDB.
 
 
 <b>Example for using SCycDB_FunctionProfiler.PL:</b>
