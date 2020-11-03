@@ -4,7 +4,7 @@ The sulfur (S) cycle driven by microorganisms is an important biogeochemical cyc
 
 The developed SCycDB contains 207 gene families and 585,055 representative sequences affiliated with 52 phyla and 2684 genera of bacteria/archaea, and 20,761 homologous orthology groups were also included to reduce false positive sequence assignments. 
 
-Three files are generated for SCycDB:
+Four files are included in SCycDB:
 
 <b>1. SCycDB_2020Mar.zip</b>: fasta format representative sequences obtained by clustering curated sequences at 100% sequence identity. This file can be used for "BLAST" searching SCycDB genes in shotgun metagenomes.
 
