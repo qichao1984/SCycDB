@@ -2,7 +2,6 @@
 use strict;
 use List::Util qw(shuffle);
 use Getopt::Long;
-
 ##Please specify where your prefered database searching tool locates
 ##NCBI blast ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/blast-2.2.26-x64-linux.tar.gz
 my $blast    = "blastall";
@@ -14,6 +13,9 @@ my $diamond_parameters="-k 1 -e 1e-4 -p 20";
 ##usearch https://www.drive5.com/usearch/download.html
 my $usearch = "usearch8.1.1861_i86linux32";
 my $usearch_parameters="-id 0.3";
+###kraken2 parameters
+my $kraken2="~/kraken2/kraken2";
+my $kraken2db="~/kraken2-fulldatabase";
 
 my ( $workdir, $method, $outfile, $seqtype, $filetype, $sampleinfo, $randomsampling );
 GetOptions(
@@ -129,7 +131,7 @@ foreach my $file(glob("*.SCyc.fastq")){
   my $reportfile=$file;
   $outfile=~s/SCyc.fastq/kraken2.txt/;
   $reportfile=~s/SCyc.fastq/kraken2.report/;
-  system "~/kraken2/kraken2  --threads 60 --use-name --db ~/kraken2-fulldatabase $file --output $outfile --report $reportfile --use-mpa-style";
+  system "$kraken2 --threads 60 --use-name --db $kraken2db $file --output $outfile --report $reportfile --use-mpa-style";
 }
 
 my %size;
