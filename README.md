@@ -1,7 +1,7 @@
 # SCycDB
 # SCycDB: A Curated Functional Gene Database for Metagenomic Profiling of Sulfur Cycling Pathways
 
-Yu, X., Zhou, J., Song, W., Xu, M., He, Q., Peng, Y., Tian, Y., Wang, C., Shu, L., Wang, S., Yan, Q., Liu, J., Tu, Q. and He, Z. (2020), SCycDB: A Curated Functional Gene Database for Metagenomic Profiling of Sulfur Cycling Pathways. Mol Ecol Resour. Accepted Author Manuscript. https://doi.org/10.1111/1755-0998.13306
+Yu, X., Zhou, J., Song, W., Xu, M., He, Q., Peng, Y., Tian, Y., Wang, C., Shu, L., Wang, S., Yan, Q., Liu, J., Tu, Q. and He, Z. (2020), SCycDB: A Curated Functional Gene Database for Metagenomic Profiling of Sulfur Cycling Pathways. Mol Ecol Resour. https://doi.org/10.1111/1755-0998.13306
 
 The sulfur (S) cycle driven by microorganisms is an important biogeochemical cycling process of the Earth's biosphere, and it is usually coupled with carbon, nitrogen and metal cycling in natural ecosystems. Shotgun metagenome sequencing has opened a new avenue to advance our understanding of S cycling microbial communities. However, accurate metagenomic profiling of S cycling microbial communities remains technically challenging, mainly due to low coverage of S cycling genes/pathways, difficulties in distinguishing homologous genes and a long research time on publicly available orthology databases. It is essential to develop a comprehensive and accurate database for characterizing S cycling microbial communities in metagenomic studies. To solve those problems, we constructed a manually curated sulfur cycling database (SCycDB) for metagenome sequencing data analysis of S cycling microbial communities in the environment. 
 
