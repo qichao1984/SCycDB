@@ -120,10 +120,11 @@ foreach my $sfile ( @sfiles ) {
     print LIST "$hit\n";
   }
   close LIST;
-  @files = glob("$workdir/*$filetype");
-  foreach my $file (@files){  
-    system("~/seqtk subseq $file $sample.list > $sample.SCyc.fastq");
- }
+  #@files = glob("$workdir/*$filetype");
+  #foreach my $file (@files){  
+  my $file="$workdir/$sample\.$filetype";
+  system("~/seqtk subseq $file $sample.list > $sample.SCyc.fastq");
+ #}
 }
 
 foreach my $file(glob("*.SCyc.fastq")){
